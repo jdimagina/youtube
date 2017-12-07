@@ -118,3 +118,8 @@ del tema YOUTUBE ================================== */
 	add_action( 'widgets_init', 'youtube_widget' );
 
 
+// cargar los meta box
+// ============================
+
+	add_filter( 'ot_meta_boxes', '__return_true' );
+	load_template( trailingslashit( get_template_directory() ) . 'inc/meta-boxes.php' );
